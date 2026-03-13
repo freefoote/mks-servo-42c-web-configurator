@@ -56,13 +56,20 @@ function formatHexData(data: number[]) {
 
 <template>
   <div
-    class="serial-monitor bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 p-4">
+    class="serial-monitor bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 p-4"
+  >
     <div class="packet-section mb-4">
-      <h3 class="text-lg font-bold mb-2 dark:text-gray-200">Sent Packets</h3>
+      <h3 class="text-lg font-bold mb-2 dark:text-gray-200">
+        Sent Packets
+      </h3>
       <div
-        class="packet-list h-32 overflow-y-auto border border-gray-200 dark:border-gray-700 p-2 bg-gray-50 dark:bg-gray-900 rounded">
-        <div v-for="(packet, index) in displayedSent" :key="index"
-          class="packet-item flex justify-between font-mono text-sm py-1 border-b border-gray-100 dark:border-gray-800 last:border-0">
+        class="packet-list h-32 overflow-y-auto border border-gray-200 dark:border-gray-700 p-2 bg-gray-50 dark:bg-gray-900 rounded"
+      >
+        <div
+          v-for="(packet, index) in displayedSent"
+          :key="index"
+          class="packet-item flex justify-between font-mono text-sm py-1 border-b border-gray-100 dark:border-gray-800 last:border-0"
+        >
           <span class="timestamp text-gray-500 dark:text-gray-400">{{ formatTimestamp(packet.timestamp) }}</span>
           <span class="hex-data text-blue-600 dark:text-blue-400">{{ formatHexData(packet.data) }}</span>
         </div>
@@ -70,11 +77,17 @@ function formatHexData(data: number[]) {
     </div>
 
     <div class="packet-section mb-4">
-      <h3 class="text-lg font-bold mb-2 dark:text-gray-200">Received Packets</h3>
+      <h3 class="text-lg font-bold mb-2 dark:text-gray-200">
+        Received Packets
+      </h3>
       <div
-        class="packet-list h-32 overflow-y-auto border border-gray-200 dark:border-gray-700 p-2 bg-gray-50 dark:bg-gray-900 rounded">
-        <div v-for="(packet, index) in displayedReceived" :key="index"
-          class="packet-item flex justify-between font-mono text-sm py-1 border-b border-gray-100 dark:border-gray-800 last:border-0">
+        class="packet-list h-32 overflow-y-auto border border-gray-200 dark:border-gray-700 p-2 bg-gray-50 dark:bg-gray-900 rounded"
+      >
+        <div
+          v-for="(packet, index) in displayedReceived"
+          :key="index"
+          class="packet-item flex justify-between font-mono text-sm py-1 border-b border-gray-100 dark:border-gray-800 last:border-0"
+        >
           <span class="timestamp text-gray-500 dark:text-gray-400">{{ formatTimestamp(packet.timestamp) }}</span>
           <span class="hex-data text-green-600 dark:text-green-400">{{ formatHexData(packet.data) }}</span>
         </div>
@@ -84,11 +97,16 @@ function formatHexData(data: number[]) {
     <div class="controls flex justify-between items-center">
       <button
         class="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded transition-colors dark:text-white text-sm font-medium"
-        @click="clearDisplay">
+        @click="clearDisplay"
+      >
         Clear
       </button>
       <label class="flex items-center space-x-2 text-sm dark:text-gray-300 cursor-pointer">
-        <input v-model="paused" type="checkbox" class="rounded dark:bg-gray-700 dark:border-gray-600" />
+        <input
+          v-model="paused"
+          type="checkbox"
+          class="rounded dark:bg-gray-700 dark:border-gray-600"
+        />
         <span>Pause Display</span>
       </label>
     </div>

@@ -14,7 +14,8 @@ import SlaveAddressInput from './inputs/SlaveAddressInput.vue'
 
 <template>
   <div
-    class="parameter-controls p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 space-y-4">
+    class="parameter-controls p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 space-y-4"
+  >
     <div>
       <h2 class="text-xl font-bold mb-2 dark:text-white">
         Parameter Controls

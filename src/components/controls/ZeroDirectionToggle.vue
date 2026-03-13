@@ -44,13 +44,23 @@ async function onZeroDirectionChange(event: Event) {
     <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Zero Direction</label>
     <div class="flex flex-col space-y-2 flex-1 max-w-[240px]">
       <label class="flex items-center space-x-2 cursor-pointer">
-        <input type="radio" name="zero-direction" value="0" :checked="zeroDirection === 0"
-          @change="onZeroDirectionChange" />
+        <input
+          type="radio"
+          name="zero-direction"
+          value="0"
+          :checked="zeroDirection === 0"
+          @change="onZeroDirectionChange"
+        />
         <span class="text-xs text-gray-500 dark:text-gray-400">CW</span>
       </label>
       <label class="flex items-center space-x-2 cursor-pointer">
-        <input type="radio" name="zero-direction" value="1" :checked="zeroDirection === 1"
-          @change="onZeroDirectionChange" />
+        <input
+          type="radio"
+          name="zero-direction"
+          value="1"
+          :checked="zeroDirection === 1"
+          @change="onZeroDirectionChange"
+        />
         <span class="text-xs text-gray-500 dark:text-gray-400">CCW</span>
       </label>
     </div>

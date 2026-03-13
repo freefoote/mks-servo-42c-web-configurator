@@ -72,19 +72,28 @@ async function stopConstantSpeed() {
       <div class="flex items-center justify-between">
         <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Speed</label>
         <div class="flex items-center space-x-2 flex-1 max-w-[240px]">
-          <input v-model.number="speed" type="range" min="0" max="127"
-            class="flex-1 h-2 bg-gray-200 dark:bg-gray-700 rounded-full cursor-pointer accent-blue-600" />
+          <input
+            v-model.number="speed"
+            type="range"
+            min="0"
+            max="127"
+            class="flex-1 h-2 bg-gray-200 dark:bg-gray-700 rounded-full cursor-pointer accent-blue-600"
+          />
           <span class="w-10 text-center text-xs text-gray-500 dark:text-gray-400">{{ speed }}</span>
         </div>
       </div>
     </div>
 
     <div class="flex items-center space-x-4 pt-2">
-      <button :disabled="!isConnected" :class="[
-        'flex-1 px-4 py-2 rounded transition-colors font-medium',
-        isConstantSpeed ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-green-600 text-white hover:bg-green-700',
-        'disabled:opacity-50'
-      ]" @click="toggleConstantSpeed">
+      <button
+        :disabled="!isConnected"
+        :class="[
+          'flex-1 px-4 py-2 rounded transition-colors font-medium',
+          isConstantSpeed ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-green-600 text-white hover:bg-green-700',
+          'disabled:opacity-50'
+        ]"
+        @click="toggleConstantSpeed"
+      >
         {{ isConstantSpeed ? 'Stop Constant Speed' : 'Start Constant Speed' }}
       </button>
     </div>

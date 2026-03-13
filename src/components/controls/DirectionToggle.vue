@@ -44,11 +44,23 @@ async function onDirectionChange(event: Event) {
     <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Motor Direction</label>
     <div class="flex flex-col space-y-2 flex-1 max-w-[240px]">
       <label class="flex items-center space-x-2 cursor-pointer">
-        <input type="radio" name="direction" value="0" :checked="direction === 0" @change="onDirectionChange" />
+        <input
+          type="radio"
+          name="direction"
+          value="0"
+          :checked="direction === 0"
+          @change="onDirectionChange"
+        />
         <span class="text-xs text-gray-500 dark:text-gray-400">CW</span>
       </label>
       <label class="flex items-center space-x-2 cursor-pointer">
-        <input type="radio" name="direction" value="1" :checked="direction === 1" @change="onDirectionChange" />
+        <input
+          type="radio"
+          name="direction"
+          value="1"
+          :checked="direction === 1"
+          @change="onDirectionChange"
+        />
         <span class="text-xs text-gray-500 dark:text-gray-400">CCW</span>
       </label>
     </div>

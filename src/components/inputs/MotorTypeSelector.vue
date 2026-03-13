@@ -35,13 +35,23 @@ watch(selectedMotorType, async (newValue) => {
     <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Motor Type</label>
     <div class="flex flex-col space-y-2">
       <label class="flex items-center space-x-2 cursor-pointer">
-        <input v-model="selectedMotorType" type="radio" name="motorType" :value="0"
-          class="form-radio h-4 w-4 text-blue-600 dark:bg-gray-700 dark:border-gray-600" />
+        <input
+          v-model="selectedMotorType"
+          type="radio"
+          name="motorType"
+          :value="0"
+          class="form-radio h-4 w-4 text-blue-600 dark:bg-gray-700 dark:border-gray-600"
+        />
         <span class="text-gray-700 dark:text-gray-300">0.9°</span>
       </label>
       <label class="flex items-center space-x-2 cursor-pointer">
-        <input v-model="selectedMotorType" type="radio" name="motorType" :value="1"
-          class="form-radio h-4 w-4 text-blue-600 dark:bg-gray-700 dark:border-gray-600" />
+        <input
+          v-model="selectedMotorType"
+          type="radio"
+          name="motorType"
+          :value="1"
+          class="form-radio h-4 w-4 text-blue-600 dark:bg-gray-700 dark:border-gray-600"
+        />
         <span class="text-gray-700 dark:text-gray-300">1.8°</span>
       </label>
     </div>

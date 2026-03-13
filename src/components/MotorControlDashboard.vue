@@ -42,8 +42,10 @@ onUnmounted(async () => {
       </div>
 
       <div class="space-y-6">
-        <SerialMonitor :sentPackets="motorStore.packetHistory.sentPackets"
-          :receivedPackets="motorStore.packetHistory.receivedPackets" />
+        <SerialMonitor
+          :sent-packets="motorStore.packetHistory.sentPackets"
+          :received-packets="motorStore.packetHistory.receivedPackets"
+        />
         <SettingsPanel />
       </div>
     </div>

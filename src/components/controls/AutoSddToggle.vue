@@ -42,7 +42,11 @@ async function onToggleChange(event: Event) {
   <div class="flex items-center justify-between">
     <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Auto Screen Off</label>
     <div class="flex items-center space-x-3 flex-1 max-w-[240px] justify-end">
-      <input type="checkbox" :checked="autoSdd" @change="onToggleChange" />
+      <input
+        type="checkbox"
+        :checked="autoSdd"
+        @change="onToggleChange"
+      />
     </div>
   </div>
 </template>

@@ -41,10 +41,19 @@ const modes = [
   <div class="flex items-center justify-between">
     <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Zero Mode</label>
     <div class="flex flex-col space-y-2">
-      <div v-for="mode in modes" :key="mode.value" class="flex items-center">
+      <div
+        v-for="mode in modes"
+        :key="mode.value"
+        class="flex items-center"
+      >
         <label class="flex items-center space-x-2 cursor-pointer">
-          <input v-model="selectedMode" type="radio" name="zeroMode" :value="mode.value"
-            class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 dark:bg-gray-700 dark:border-gray-600" />
+          <input
+            v-model="selectedMode"
+            type="radio"
+            name="zeroMode"
+            :value="mode.value"
+            class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 dark:bg-gray-700 dark:border-gray-600"
+          />
           <span class="text-sm font-medium text-gray-700 dark:text-gray-300">{{ mode.label }}</span>
         </label>
       </div>

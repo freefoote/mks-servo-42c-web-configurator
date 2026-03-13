@@ -26,7 +26,7 @@ async function connect() {
     motorStore.connection.slaveAddress = slaveAddress.value;
     motorStore.connection.baudRate = selectedBaudRate.value;
 
-    console.log('Successfully connected via Web Serial');
+    console.warn('Successfully connected via Web Serial');
   } catch (error) {
     console.error('Failed to connect:', error);
     if (error instanceof Error && error.name === 'NotFoundError') {
@@ -70,23 +70,30 @@ async function disconnect() {
     </div>
 
     <div class="flex space-x-3">
-      <button :disabled="isConnecting || motorStore.connection.isConnected"
+      <button
+        :disabled="isConnecting || motorStore.connection.isConnected"
         class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded disabled:opacity-50 transition-colors"
-        @click="connect">
+        @click="connect"
+      >
         {{ isConnecting ? 'Connecting...' : 'Connect' }}
       </button>
-      <button :disabled="!motorStore.connection.isConnected || isDisconnecting"
+      <button
+        :disabled="!motorStore.connection.isConnected || isDisconnecting"
         class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded disabled:opacity-50 transition-colors"
-        @click="disconnect">
+        @click="disconnect"
+      >
         {{ isDisconnecting ? 'Disconnecting...' : 'Disconnect' }}
       </button>
     </div>
 
     <div class="mt-3">
-      <span class="px-3 py-1 rounded-full text-sm font-medium" :class="{
-        'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300': motorStore.connection.isConnected,
-        'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300': !motorStore.connection.isConnected
-      }">
+      <span
+        class="px-3 py-1 rounded-full text-sm font-medium"
+        :class="{
+          'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300': motorStore.connection.isConnected,
+          'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300': !motorStore.connection.isConnected
+        }"
+      >
         {{ motorStore.connection.isConnected ? 'Connected' : 'Disconnected' }}
       </span>
     </div>

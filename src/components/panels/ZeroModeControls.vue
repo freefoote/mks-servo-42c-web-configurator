@@ -8,7 +8,8 @@ import GoToZeroButton from "../motion/GoToZeroButton.vue";
 
 <template>
   <div
-    class="flex flex-col p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 space-y-4">
+    class="flex flex-col p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 space-y-4"
+  >
     <h2 class="text-xl font-bold dark:text-white">
       Zero Mode Controls
     </h2>

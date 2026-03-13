@@ -69,7 +69,7 @@ export class SerialService {
       this.keepReading = true;
       void this.readLoop();
 
-      console.log("Serial port connected");
+      console.warn("Serial port connected");
       // Initialize motor status by querying readable parameters
       void this.initializeMotorStatus();
     } catch (error) {
@@ -227,7 +227,7 @@ export class SerialService {
       this.sendPacket(packet).catch((err) => {
         clearTimeout(timeout);
         this.pendingRequests.delete(requestKey);
-        reject(err);
+        reject(err instanceof Error ? err : new Error(String(err)));
       });
     });
   }

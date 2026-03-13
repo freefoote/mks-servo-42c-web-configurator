@@ -61,9 +61,15 @@ onMounted(() => {
           v-model="selectedTheme"
           class="w-48 p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 transition-all cursor-pointer shadow-sm hover:border-blue-400"
         >
-          <option value="light">☀️ Light Mode</option>
-          <option value="dark">🌙 Dark Mode</option>
-          <option value="auto">🌗 Auto (System)</option>
+          <option value="light">
+            ☀️ Light Mode
+          </option>
+          <option value="dark">
+            🌙 Dark Mode
+          </option>
+          <option value="auto">
+            🌗 Auto (System)
+          </option>
         </select>
       </div>
     </div>

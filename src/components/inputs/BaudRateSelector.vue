@@ -89,12 +89,24 @@ watch(() => motorStore.motorStatus.baudRate, (newRate) => {
       v-model="selectedBaudRate"
       class="block w-40 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
     >
-      <option :value="9600">01 = 9600</option>
-      <option :value="19200">02 = 19200</option>
-      <option :value="25000">03 = 25000</option>
-      <option :value="38400">04 = 38400</option>
-      <option :value="57600">05 = 57600</option>
-      <option :value="115200">06 = 115200</option>
+      <option :value="9600">
+        01 = 9600
+      </option>
+      <option :value="19200">
+        02 = 19200
+      </option>
+      <option :value="25000">
+        03 = 25000
+      </option>
+      <option :value="38400">
+        04 = 38400
+      </option>
+      <option :value="57600">
+        05 = 57600
+      </option>
+      <option :value="115200">
+        06 = 115200
+      </option>
     </select>
   </div>
 </template>

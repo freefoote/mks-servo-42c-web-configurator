@@ -45,11 +45,21 @@ watch(selectedZeroSpeed, async (newValue) => {
         v-model="selectedZeroSpeed"
         class="block w-40 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
       >
-        <option :value="0">0 (Fastest)</option>
-        <option :value="1">1</option>
-        <option :value="2">2</option>
-        <option :value="3">3</option>
-        <option :value="4">4 (Slowest)</option>
+        <option :value="0">
+          0 (Fastest)
+        </option>
+        <option :value="1">
+          1
+        </option>
+        <option :value="2">
+          2
+        </option>
+        <option :value="3">
+          3
+        </option>
+        <option :value="4">
+          4 (Slowest)
+        </option>
       </select>
       <p class="text-[10px] text-gray-500 dark:text-gray-400 mt-1">
         Smaller = faster

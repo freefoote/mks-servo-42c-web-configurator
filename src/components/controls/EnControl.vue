@@ -43,18 +43,36 @@ async function onRadioChange(event: Event) {
     <label class="text-sm font-medium text-gray-700 dark:text-gray-300">EN Pin Active Level</label>
     <div class="flex flex-col space-y-2">
       <label class="flex items-center space-x-2 cursor-pointer">
-        <input type="radio" name="enActive" :value="0" :checked="enActive === 0"
-          class="h-4 w-4 text-blue-600 dark:bg-gray-700 dark:border-gray-600" @change="onRadioChange" />
+        <input
+          type="radio"
+          name="enActive"
+          :value="0"
+          :checked="enActive === 0"
+          class="h-4 w-4 text-blue-600 dark:bg-gray-700 dark:border-gray-600"
+          @change="onRadioChange"
+        />
         <span class="text-xs text-gray-700 dark:text-gray-300">L (Low)</span>
       </label>
       <label class="flex items-center space-x-2 cursor-pointer">
-        <input type="radio" name="enActive" :value="1" :checked="enActive === 1"
-          class="h-4 w-4 text-blue-600 dark:bg-gray-700 dark:border-gray-600" @change="onRadioChange" />
+        <input
+          type="radio"
+          name="enActive"
+          :value="1"
+          :checked="enActive === 1"
+          class="h-4 w-4 text-blue-600 dark:bg-gray-700 dark:border-gray-600"
+          @change="onRadioChange"
+        />
         <span class="text-xs text-gray-700 dark:text-gray-300">H (High)</span>
       </label>
       <label class="flex items-center space-x-2 cursor-pointer">
-        <input type="radio" name="enActive" :value="2" :checked="enActive === 2"
-          class="h-4 w-4 text-blue-600 dark:bg-gray-700 dark:border-gray-600" @change="onRadioChange" />
+        <input
+          type="radio"
+          name="enActive"
+          :value="2"
+          :checked="enActive === 2"
+          class="h-4 w-4 text-blue-600 dark:bg-gray-700 dark:border-gray-600"
+          @change="onRadioChange"
+        />
         <span class="text-xs text-gray-700 dark:text-gray-300">Hold</span>
       </label>
     </div>
